@@ -1,0 +1,19 @@
+啤酒：
+2元钱1瓶
+4个瓶盖换1瓶
+2个空瓶换一瓶
+
+问：
+10元最多可以喝几瓶？
+var cap = 5;
+var bottle = 5;
+var num = 5;
+while(cap>=4||bottle>=2){
+ num=num+Math.floor(cap/4)+Math.floor(bottle/2);
+ var t = cap;
+ var s = bottle;
+ cap = t- (Math.floor(t/4))*4 + Math.floor(t/4)+Math.floor(s/2);
+ bottle = s - (Math.floor(bottle/2))*2 + Math.floor(t/4)+Math.floor(s /2);
+};
+num
+15
